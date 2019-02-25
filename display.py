@@ -9,7 +9,8 @@ RED = 0
 GREEN = 1
 BLUE = 2
 
-DEFAULT_COLOR = [0, 0, 0]
+DEFAULT_COLOR = [107, 140, 254]
+
 
 def new_screen( width = XRES, height = YRES ):
     screen = []
@@ -55,6 +56,7 @@ def display( screen ):
     ppm_name = 'pic.ppm'
     save_ppm( screen, ppm_name )
     p = Popen( ['display', ppm_name], stdin=PIPE, stdout = PIPE )
+#PUT IN:
+    #p = Popen( ['open', ppm_name], stdin=PIPE, stdout = PIPE )
     p.communicate()
     remove(ppm_name)
-
