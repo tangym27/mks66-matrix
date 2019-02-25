@@ -44,9 +44,10 @@ def matrix_mult( m1, m2 ):
             product = 0
             for i in range(len(m1)):
                 product += (m1[i][row] * m2[col][i])
-            m2[col][row] = product
-#    m2 = new_mat
-    # return m2
+            new_mat[col][row] = product
+    for i in range(len(new_mat)):
+        for j in range(len(new_mat[0])):
+            m2[i][j] = new_mat[i][j]
 
 def new_matrix(rows = 4, cols = 4):
     m = []

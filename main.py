@@ -12,18 +12,36 @@ m2 = [[2, 4], [4, 6], [6, 8]]
 A = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
 B = [[11,12,13,14],[15,16,17,18],[19,20,21,22],[23,24,25,26]]
 print("Printing matrix:")
-print("==========================")
+print("=======================================")
+print("Matrix A:")
 print_matrix(A)
+print("Matrix B:")
 print_matrix(B)
 
-print("Printing matrix after multiplication:")
-print("==========================")
+print("Printing matrix after multiplication (A x B):")
+print("=======================================")
 matrix_mult(A,B)
+print("Matrix A:")
+print_matrix(A)
+print("Matrix B:")
 print_matrix(B)
+
+print("Printing matrix after multiplication (B x A):")
+print("=======================================")
+matrix_mult(B,A)
+print("Matrix A:")
+print_matrix(A)
+print("Matrix B:")
+print_matrix(B)
+
 
 print("Printing matrix after ident:")
-print("==========================")
-A = ident(A)
+print("=======================================")
+IDENT = ident(new_matrix())
+matrix_mult(IDENT, A)
+print("Ident:")
+print_matrix(IDENT)
+print("Matrix A:")
 print_matrix(A)
 
 #####################################################################################################################
